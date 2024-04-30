@@ -11,7 +11,7 @@ app.use(express.json())
 // app.use(helmet())
 // app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
-app.use(cors());
+// app.use(cors());
 
 const accessLogStream = rfs.createStream("access.log",{
   interval:'1d',
@@ -33,7 +33,7 @@ app.use("/api",testRoutes)
 
 
 app.get('/',(req,res)=>{
-  res.json("Hello World!")
+  res.json({Hello:"Hello World!"})
 })
 
 // inbuilt middleware
