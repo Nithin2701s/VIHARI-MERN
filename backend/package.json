@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "server": "node backend/server.js",
+    "start": "nodemon api/app.js",
+    "server": "node api/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
