@@ -1,6 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const cors =require('cors');
+// const mongoose = require('mongoose');
+// const cors =require('cors');
 // const path=require('path');
 // const morgan = require('morgan');
 // const rfs = require('rotating-file-stream');
@@ -37,14 +37,17 @@ app.get('/',(req,res)=>{
 // app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 // app.use('/images',express.static(__dirname+'/public/Images'));
 
-mongoose
-  .connect(
-    "mongodb+srv://Srikar:Sailu3002@cluster0.ch9hacp.mongodb.net/Vihari"
-  ) 
-  .then((result) => {
-    app.listen(4000, () => {
-      console.log("listening to port 4000");
-    });
-    console.log("Mongodb connected");
-  })
-  .catch((err) => console.log("MongoDB connection error:", err));
+// mongoose
+//   .connect(
+//     "mongodb+srv://Srikar:Sailu3002@cluster0.ch9hacp.mongodb.net/Vihari"
+//   ) 
+//   .then((result) => {
+//     app.listen(4000, () => {
+//       console.log("listening to port 4000");
+//     });
+//     console.log("Mongodb connected");
+//   })
+//   .catch((err) => console.log("MongoDB connection error:", err));
+app.listen(4000,()=>{
+  console.log("run")
+})
