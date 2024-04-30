@@ -19,16 +19,16 @@ const accessLogStream = rfs.createStream("access.log",{
 })
 app.use(morgan('combined',{stream:accessLogStream}))
 // Routing..
-app.use(require('./routes/auth'))
+app.use(require('../routes/auth'))
  
-const agentRoutes=require('./routes/agent');
-const adminRoutes=require('./routes/admin');
-const tourRoutes = require('./routes/tour');
-const testRoutes = require('./routes/test')
+const agentRoutes=require('../routes/agent');
+const adminRoutes=require('../routes/admin');
+const tourRoutes = require('../routes/tour');
+const testRoutes = require('../routes/test')
 app.use('/api/agent',agentRoutes);
 app.use('/api/admin',adminRoutes);
 app.use('/api/tour',tourRoutes);
-app.use(require('./routes/bus'))
+app.use(require('../routes/bus'))
 app.use("/api",testRoutes)
 
 
