@@ -5,7 +5,7 @@ const express = require('express');
 // const morgan = require('morgan');
 // const rfs = require('rotating-file-stream');
 const app = express()
-app.use(express.json())
+// app.use(express.json())
 
 app.use(cors());
 
