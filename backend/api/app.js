@@ -38,7 +38,7 @@ app.get('/',(req,res)=>{
 
 // inbuilt middleware
 // app.use('/uploads',express.static(__dirname+'/uploads'));
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use('/images',express.static(__dirname+'/public/Images'));
 
 app.use('/error',(req,res,next)=>{
@@ -56,7 +56,7 @@ mongoose
     "mongodb+srv://Srikar:Sailu3002@cluster0.ch9hacp.mongodb.net/Vihari"
   ) 
   .then((result) => {
-    app.listen(8080, () => {
+    app.listen(4000, () => {
       console.log("listening to port 4000");
     });
     console.log("Mongodb connected");
