@@ -56,7 +56,7 @@ mongoose
     "mongodb+srv://Srikar:Sailu3002@cluster0.ch9hacp.mongodb.net/Vihari"
   ) 
   .then((result) => {
-    app.listen(4000, () => {
+    app.listen(5000, () => {
       console.log("listening to port 4000");
     });
     console.log("Mongodb connected");
