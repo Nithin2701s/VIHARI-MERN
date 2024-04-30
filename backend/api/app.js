@@ -7,7 +7,7 @@ const express = require('express');
 const app = express()
 // app.use(express.json())
 
-app.use(cors());
+// app.use(cors());
 
 // const accessLogStream = rfs.createStream("access.log",{
 //   interval:'1d',
