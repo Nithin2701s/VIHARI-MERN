@@ -77,8 +77,8 @@ const PassengerDetails = () => {
     name: "Vihari",
     description: "A travel-site",
     order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
-    handler: ()=>{
-      bookSeats()
+    handler: async()=>{
+     await bookSeats()
     },
     prefill: {
       name:'Nithin' ,
