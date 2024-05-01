@@ -47,7 +47,7 @@ const PassengerDetails = () => {
   const bookSeats = async()=>{
     const data = selectedSeats.seats.map(seat => ({seat:seat,...formsData[seat]}));
     alert('payment successfull')
-    const response = await fetch('http://localhost:4000/booking',{
+    const response = await fetch('https://vihari-mern-1.onrender.com//booking',{
       method:'POST',
       headers:{
         "Content-type":"application/json",
@@ -98,7 +98,7 @@ const PassengerDetails = () => {
     const data = selectedSeats.seats.map(seat => ({seat:seat,...formsData[seat]}));
     setselectedseats({...selectedSeats,seats:data})
     alert('payment successfull')
-    const response = await fetch('http://localhost:4000/booking',{
+    const response = await fetch('https://vihari-mern-1.onrender.com/booking',{
       method:'POST',
       headers:{
         "Content-type":"application/json",
