@@ -86,7 +86,7 @@ const AllAgents = () => {
                         Reject
                     </button>
                     <a style={{ textDecoration: 'none', fontSize: '15px', padding: '5px', backgroundColor: 'blue', color: 'white', borderRadius: '3px' }}
-                        href={`http://localhost:4000/${agent.document ? agent.document.replace(/^.*backend\\/i, "") : ''}`}
+                        href={`https://vihari-mern-1.onrender.com/${agent.document ? agent.document.replace(/^.*backend\\/i, "") : ''}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => handlePdfLinkClick(agent._id)}
@@ -165,7 +165,7 @@ const AllAgents = () => {
 
                             {/* {selectedAgentId === agent._id && agent.document && (
                                 <iframe
-                                    src={`http://localhost:4000/${agent.document.replace(/^.*backend\\/i, "")}`}
+                                    src={`https://vihari-mern-1.onrender.com/${agent.document.replace(/^.*backend\\/i, "")}`}
                                     title={`PDF Viewer - Agent ${agent._id}`}
                                     style={{ width: '100%', height: '500px', border: '1px solid #ddd', marginTop: '10px' }}
                                 ></iframe>

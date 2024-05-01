@@ -76,7 +76,7 @@ const AgentBuses = () => {
                         <tr key={bus._id} className='bus-row'>
                             <td>
                                 <img
-                                    src={`http://localhost:4000/${bus.Imageurl.replace(/\\/g, '/').replace('backend/', '')}`}
+                                    src={`https://vihari-mern-1.onrender.com/${bus.Imageurl.replace(/\\/g, '/').replace('backend/', '')}`}
                                     alt=""
                                     style={{ height: '80px', objectFit: 'cover' }}
                                 />

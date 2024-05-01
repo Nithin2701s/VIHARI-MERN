@@ -10,14 +10,14 @@ const GetUsersByBusId = () => {
     const fetchUserDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:4000/api/${busId}/alldetails`
+          `https://vihari-mern-1.onrender.com/api/${busId}/alldetails`
         );
         const data = await response.json();
 
         const userDetailsArray = await Promise.all(
           data.getDetails.map(async (details) => {
             const userResponse = await fetch(
-              `http://localhost:4000/api/${details.user}/userdetails`
+              `https://vihari-mern-1.onrender.com/api/${details.user}/userdetails`
             );
             const userData = await userResponse.json();
 

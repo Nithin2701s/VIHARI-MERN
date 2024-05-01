@@ -65,7 +65,7 @@ const AllTours = () => {
                     <div>
                       <img
                         style={{ height: "200px" }}
-                        src={`http://localhost:4000/${tour.DispImageurl}`}
+                        src={`https://vihari-mern-1.onrender.com/${tour.DispImageurl}`}
                         alt="package-place"
                       />
                     </div>

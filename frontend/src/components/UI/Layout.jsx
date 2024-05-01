@@ -12,7 +12,7 @@ const Layout = ({bus,date}) => {
    const [Bseats, setBseats] = useState([])
    const booked = async(bus)=>{
      const id =bus._id
-     const response = await fetch('http://localhost:4000/bookedseats',{
+     const response = await fetch('https://vihari-mern-1.onrender.com/bookedseats',{
       method:"POST",
       headers:{
         "Content-type":"application/json"

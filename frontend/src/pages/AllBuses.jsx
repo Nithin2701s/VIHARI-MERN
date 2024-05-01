@@ -48,7 +48,7 @@ const AllBuses = () => {
                         <tr key={bus._id} className='bus-row'>
                             <td>
                                 <img
-                                    src={`http://localhost:4000/${bus.Imageurl}`}
+                                    src={`https://vihari-mern-1.onrender.com/${bus.Imageurl}`}
                                     alt=""
                                     style={{ height: '80px', objectFit: 'cover' }}
                                 />

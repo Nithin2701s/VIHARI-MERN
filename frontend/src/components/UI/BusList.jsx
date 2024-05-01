@@ -18,7 +18,7 @@ const BusList = () => {
   
   const buslist = async()=>{
     if(searchDetails.srcname!=='' && searchDetails.destname!==''){
-    const response = await fetch('http://localhost:4000/buslist',{
+    const response = await fetch('https://vihari-mern-1.onrender.com/buslist',{
     method:'POST',
     headers:{
       "Content-type":"application/json"
@@ -66,7 +66,7 @@ const BusList = () => {
             <tr key={bus.id} className='bus-row'>
               <td>
                 <img
-                  src={`http://localhost:4000/${bus.Imageurl?.replace(/^.*backend\\/i, "")}`}
+                  src={`https://vihari-mern-1.onrender.com/${bus.Imageurl?.replace(/^.*backend\\/i, "")}`}
                   alt=""
                   style={{ height: '80px', objectFit: 'cover' }}
                 />
