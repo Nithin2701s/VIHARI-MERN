@@ -4,5 +4,5 @@
       { "handle": "filesystem" },
       { "src": "/(.*)", "dest": "index.js" }
     ],
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+    "rewrites": [{ "source": "/(.*)", "destination": "./" }]
   }
