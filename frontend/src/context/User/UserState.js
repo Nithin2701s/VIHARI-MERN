@@ -1,7 +1,7 @@
 import { useState } from "react";
 import userContext from "./userContext";
 
-const host='http://localhost:4000'
+const host='https://vihari-mern-1.onrender.com'
 
 
 const UserState = (props) => {
