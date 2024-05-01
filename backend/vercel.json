@@ -4,9 +4,7 @@
       {"src":"*.js", "use": "@vercel/node" },
       {"src":"*.jpg","use":"@vercel/static"},
       {"src":"*.png","use":"@vercel/static"},
-      {"src":"*.jpeg","use":"@vercel/static"},
-      {"src":"*.pdf","use":"@vercel/static"},
-      {"src":"*.log","use":"@vercel/static"}
+      {"src":"*.jpeg","use":"@vercel/static"}
     ],
     "routes":[
       {"src":"/(.*)","dest":"index.js" }
