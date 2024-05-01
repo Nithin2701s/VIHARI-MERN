@@ -144,6 +144,7 @@ exports.addUser = async (req, res) => {
     lastName,
     email,
     password,
+    mobile,
     confirmPassword,
   } = req.body;
   try {
