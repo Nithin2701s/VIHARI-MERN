@@ -60,7 +60,7 @@ const TourDetails = () => {
           <div className="place-image-container">
             <img
               className="place-image"
-              src={place.Imageurl ? `http://localhost:4000/${place.Imageurl.replace(/\\/g, '/').replace('backend/', '')}` : ''}
+              src={place.Imageurl ? `https://vihari-mern-1.onrender.com/${place.Imageurl.replace(/\\/g, '/').replace('backend/', '')}` : ''}
               alt={"Place"}
             />
 

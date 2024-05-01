@@ -65,7 +65,7 @@ const Tours = () => {
       description: "A travel-site",
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
       handler: async()=>{
-        const response = await fetch('http://localhost:4000/api/tour/tourbooking',{
+        const response = await fetch('https://vihari-mern-1.onrender.com/api/tour/tourbooking',{
           method:"POST",
           headers:{
             "auth-token":localStorage.getItem('token'),
@@ -122,7 +122,7 @@ const Tours = () => {
                   <div className="col-md-4 col-sm-6" key={tour._id}>
                     <div className="single-package-item">
                       <div>
-                        <img style={{ height: '200px' }} src={`http://localhost:4000/${tour.DispImageurl}`} alt="package-place" />
+                        <img style={{ height: '200px' }} src={`https://vihari-mern-1.onrender.com/${tour.DispImageurl}`} alt="package-place" />
                       </div>
                       <div className="single-package-item-txt">
                         <h3 >

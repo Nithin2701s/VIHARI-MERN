@@ -7,7 +7,7 @@ const BusState = (props) => {
     setselectedSeats({bus,seats:seats})
  }
  const orderRazorpay = async(price)=>{
-  let response = await fetch('http://localhost:4000/order',{
+  let response = await fetch('https://vihari-mern-1.onrender.com/order',{
    method:'POST',
    headers:{
    "Content-Type":"application/json"

@@ -17,7 +17,7 @@ const Profile = () => {
   const [buses, setbuses] = useState([]);
   const [tourBookings, setTourBookings] = useState([]);
   const getDetails = async () => {
-    const response = await fetch("http://localhost:4000/userdetails", {
+    const response = await fetch("https://vihari-mern-1.onrender.com/userdetails", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -28,7 +28,7 @@ const Profile = () => {
     setuser(json.user);
   };
   const getTrips = async () => {
-    const response = await fetch("http://localhost:4000/history", {
+    const response = await fetch("https://vihari-mern-1.onrender.com/history", {
       headers: {
         "auth-token": localStorage.getItem("token"),
       },
@@ -67,7 +67,7 @@ const Profile = () => {
     navigate("/profile/editUserProfile");
   };
   const getBusDetails = async (id) => {
-    const response = await fetch("http://localhost:4000/busdetails", {
+    const response = await fetch("https://vihari-mern-1.onrender.com/busdetails", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -80,7 +80,7 @@ const Profile = () => {
 
   //  Function to get all tour bookings
   const getTourBookings = async () => {
-    const response = await fetch("http://localhost:4000/tourbookings", {
+    const response = await fetch("https://vihari-mern-1.onrender.com/tourbookings", {
       headers: {
         "auth-token": localStorage.getItem("token"),
       },
@@ -88,7 +88,7 @@ const Profile = () => {
     const json = await response.json();
     let tours = [];
     json.tickets.forEach(async (ticket) => {
-      const res = await fetch("http://localhost:4000/api/tour/gettour", {
+      const res = await fetch("https://vihari-mern-1.onrender.com/api/tour/gettour", {
         method: "POST",
         headers: {
           "auth-token": localStorage.getItem("token"),
