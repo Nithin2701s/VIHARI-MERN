@@ -78,7 +78,31 @@ const PassengerDetails = () => {
     description: "A travel-site",
     order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
     handler: async()=>{
-     await bookSeats()
+      try {
+        const data = selectedSeats.seats.map(seat => ({seat:seat,...formsData[seat]}));
+        alert('payment successfull')
+        const response = await fetch('https://vihari-mern-1.onrender.com//booking',{
+          method:'POST',
+          headers:{
+            "Content-type":"application/json",
+            "auth-token":localStorage.getItem('token')
+          },
+          body:JSON.stringify({bus:selectedSeats.bus,seats:data,date:searchDetails.date})
+        })
+        const json = await response.json();
+        if(json.success){
+          alert("Booking successful");
+          navigate('/')
+        }
+        else {
+          alert("Booking failed ! Your amount will return to your account in 3-5 hours")
+          navigate('/')
+        } 
+      } catch (error) {
+        console.log(error)
+      }
+      
+    //  navigate('/')
     },
     prefill: {
       name:'Nithin' ,
