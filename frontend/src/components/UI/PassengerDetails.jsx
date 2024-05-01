@@ -94,28 +94,6 @@ const PassengerDetails = () => {
   };
 
   const rzp1 = new Razorpay(options);
-  rzp1.on("payment.success",async(res)=>{
-    const data = selectedSeats.seats.map(seat => ({seat:seat,...formsData[seat]}));
-    setselectedseats({...selectedSeats,seats:data})
-    alert('payment successfull')
-    const response = await fetch('https://vihari-mern-1.onrender.com/booking',{
-      method:'POST',
-      headers:{
-        "Content-type":"application/json",
-        "auth-token":localStorage.getItem('token')
-      },
-      body:JSON.stringify({bus:selectedSeats.bus,seats:data,date:searchDetails.date})
-    })
-    const json = await response.json();
-    if(json.success){
-      alert("Booking successful");
-      navigate('/')
-    }
-    else {
-      alert("Booking failed ! Your amount will return to your account in 3-5 hours")
-      navigate('/')
-    }
-  })
   rzp1.on("payment.failed", function (response) {
     // alert(response.error.code);
     // alert(response.error.description);
